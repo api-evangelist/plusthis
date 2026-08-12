@@ -1,0 +1,79 @@
+generated: '2026-08-12'
+method: probed
+source: live probes of PlusThis hosts + review of kb.plusthis.com / help.plusthis.com / blog.plusthis.com
+versioning:
+  policy_published: false
+  scheme: none
+  note: >
+    No API version scheme is published. The application host answers
+    https://api.plusthis.com/v1 with a bare "OK" (HTTP 200, text/html), which
+    implies an internal versioned namespace behind the web app, but no
+    documentation, reference, or specification for it is published anywhere.
+deprecation:
+  policy_published: false
+  sunset_header: not documented
+  deprecation_header: not documented
+  rfc8594: false
+  note: No deprecation or sunset policy is published; no Deprecation pointer emitted.
+status_page:
+  published: false
+  probes:
+  - url: https://status.plusthis.com/
+    status: 000
+    result: DNS does not resolve
+  - url: https://plusthis.statuspage.io/
+    status: 200
+    result: >
+      SOFT-200 FALSE POSITIVE — redirects to atlassian.com/software/statuspage
+      marketing. Not a PlusThis status page.
+  - url: https://plusthis.instatus.com/
+    status: 200
+    result: >
+      SOFT-200 FALSE POSITIVE — redirects to instatus.com marketing. Not a
+      PlusThis status page.
+  note: No StatusPage pointer emitted; both 200s are vendor marketing pages, not evidence.
+sla:
+  published: false
+  note: >
+    No uptime SLA is published. The Max and GHL Agency tiers advertise "priority
+    tool execution" and "priority status" as commercial differentiators, but no
+    numeric availability or latency commitment accompanies them.
+support:
+  channels:
+  - type: help centre
+    url: https://help.plusthis.com/en/
+  - type: knowledge base
+    url: https://kb.plusthis.com/
+  - type: email
+    value: help@plusthis.com
+  - type: phone
+    value: 1-844-758-7844
+    note: phone support is a Max / Agency tier entitlement
+  hours: weekdays 08:00-17:00 US Eastern
+  community:
+    type: Facebook user group
+    url: https://help.plusthis.com/en/articles/10826144-join-our-community.md
+change_communication:
+  changelog_published: false
+  release_notes_published: false
+  channel: blog
+  blog: https://blog.plusthis.com/
+  last_observed_post:
+    title: 'When Bots Attack: How a Malicious Campaign Made Our Tool Stronger'
+    date: '2024-12-17'
+  note: >
+    No dated changelog or release-notes surface exists. Product changes are
+    announced on the blog, whose most recent post at the time of probing was
+    roughly twenty months old — so even the informal channel is stale. No
+    ChangeLog pointer emitted.
+x-evidence:
+- url: https://status.plusthis.com/
+  http_status: 0
+- url: https://plusthis.statuspage.io/
+  http_status: 200
+- url: https://plusthis.instatus.com/
+  http_status: 200
+- url: https://blog.plusthis.com/
+  http_status: 200
+- url: https://api.plusthis.com/v1
+  http_status: 200

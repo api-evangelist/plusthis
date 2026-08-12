@@ -1,0 +1,30 @@
+generated: '2026-08-12'
+method: searched
+source: https://www.plusthis.com/pricing
+limit_count: 0
+limits: []
+note: >
+  An honest zero. PlusThis publishes no API rate limits because it publishes no
+  public API — there is no request-per-second ceiling, no burst allowance, no
+  429 contract, and no RateLimit-*/X-RateLimit-*/Retry-After response headers
+  documented anywhere on plusthis.com, kb.plusthis.com or help.plusthis.com.
+  The only published quantitative ceilings are commercial quotas attached to a
+  subscription tier (Active Tools and monthly Tool Runs: 750 on Starter, 5,000
+  on Pro, 50,000 on Max, and 5K-2M across the GHL agency ladder). Those are
+  billing quotas consumed by tools firing inside a connected CRM, not runtime
+  rate limits an integrator can back off against, so they are recorded in
+  plans/plusthis-plans-pricing.yml and deliberately NOT duplicated here as
+  limits[] entries. No RateLimits pointer is wired into apis.yml for the same
+  reason: a rate-limit pointer over an empty limits[] would credit PlusThis
+  with a runtime signal it does not publish.
+quota_reference: plans/plusthis-plans-pricing.yml
+headers_documented: []
+exhaustion_status_code: null
+x-evidence:
+- url: https://www.plusthis.com/pricing
+  http_status: 200
+- url: https://kb.plusthis.com/faqs
+  http_status: 200
+- url: https://help.plusthis.com/llms.txt
+  http_status: 200
+  note: full help-centre index; no rate-limit article present

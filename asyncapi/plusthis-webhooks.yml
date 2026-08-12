@@ -1,0 +1,68 @@
+generated: '2026-08-12'
+method: searched
+source: https://help.plusthis.com/en/articles/14324607-webhook-catcher-activecampaign
+asyncapi_spec: none
+event_surface:
+  outbound: none
+  inbound: partial
+note: >
+  PlusThis publishes NO AsyncAPI and NO outbound webhook/event surface. It does
+  not emit events a consumer can subscribe to, so there is nothing to react to
+  rather than poll. The one webhook feature it documents runs the other way: the
+  "Webhook Catcher" tool provisions a PlusThis-hosted URL that RECEIVES webhooks
+  from third-party applications and writes the payload onto a contact record in
+  the connected CRM. Because the direction is inbound-only, no `Webhooks`
+  pointer is wired into apis.yml — the webhooks_advertised check reads
+  "consumers can react to events", which this surface does not provide.
+inbound:
+  name: Webhook Catcher
+  description: >
+    A configurable PlusThis tool that catches webhook data posted by another
+    application and saves the values onto a contact record in the connected CRM.
+  endpoint: generated per tool inside the PlusThis application; no stable, documented base URL
+  crm_variants:
+  - ActiveCampaign
+  - Drip
+  - HighLevel
+  - Keap
+  - Ontraport
+  configuration:
+  - step: contact identification
+    detail: choose lookup by Email or ID, then name the webhook key carrying that identifier
+  - step: field mapping
+    detail: map each incoming webhook key to a CRM contact field; keys are case-sensitive and must match exactly
+  - step: tagging
+    detail: optionally apply a CRM tag when the webhook is received
+  undocumented:
+  - accepted HTTP methods
+  - payload content types
+  - authentication or shared-secret verification
+  - signature header
+  - retry / delivery-guarantee semantics
+  - response codes returned to the sender
+  docs:
+  - https://help.plusthis.com/en/articles/14324607-webhook-catcher-activecampaign
+  - https://help.plusthis.com/en/articles/14327103-webhook-catcher-drip
+  - https://help.plusthis.com/en/articles/14327121-webhook-catcher-highlevel
+  - https://help.plusthis.com/en/articles/14327139-webhook-catcher-keap
+  - https://help.plusthis.com/en/articles/14327160-webhook-catcher-ontraport
+adjacent_trigger_surfaces:
+  note: >
+    Several other PlusThis tools also mint per-configuration HTTPS URLs that fire
+    a CRM action when requested (Action Links, Smart Links, Easy Opt In/Out,
+    Gimme an Update Link, Page Triggers, Video Triggers). These are one-off
+    tracking URLs generated in the app rather than a documented API, and no
+    request/response contract is published for any of them.
+  tools:
+  - Action Links
+  - Smart Links
+  - Easy Opt In
+  - Easy Opt Out
+  - Gimme an Update Link
+  - Page Triggers
+  - Video Triggers
+x-evidence:
+- url: https://help.plusthis.com/en/articles/14324607-webhook-catcher-activecampaign.md
+  http_status: 200
+- url: https://help.plusthis.com/llms.txt
+  http_status: 200

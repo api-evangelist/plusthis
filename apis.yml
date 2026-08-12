@@ -1,17 +1,42 @@
 aid: plusthis
 name: PlusThis
-description: 'PlusThis is a company surfaced via the API Evangelist harvest backlog (source: marketing-integration-graph)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  PlusThis is an Arizona-based marketing automation add-on company, founded in
+  2011, that sells a toolkit of roughly seventy no-code "tools" which bolt extra
+  behaviour onto a CRM a business already runs — Keap (Infusionsoft),
+  ActiveCampaign, Ontraport, HubSpot, Drip and HighLevel (GHL). The tools cover
+  action links and smart links, countdown and evergreen-date scarcity, webinar
+  and meeting connections (Zoom, GoToWebinar, WebinarJam, EverWebinar),
+  scheduling connections (Calendly, Acuity), SMS sequences, field math and text
+  formatting, contact validation and deduplication, Google Sheets and Drive
+  export, Slack and DocuSign connections, and a Webhook Catcher that writes
+  inbound third-party webhook payloads onto a CRM contact record. PlusThis is
+  metered commercially on Active Tools and monthly Tool Runs rather than API
+  calls, and it publishes no public developer API, no OpenAPI or other
+  machine-readable contract, and no client SDKs — it is a consumer of other
+  vendors' APIs rather than a producer of one.
+image: https://d60ayi9p2ljnr.cloudfront.net/cms/assets/plusthis-icon-lg.png
 url: https://raw.githubusercontent.com/api-evangelist/plusthis/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:marketing-integration-graph
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profile
+x-tier-reason: enriched
 specificationVersion: '0.20'
 created: '2026-08-12'
 modified: '2026-08-12'
 tags:
 - Company
+- Marketing Automation
+- Marketing
+- CRM
+- Sales
+- No Code
+- Automation
+- Integration
+- Webhooks
+- Email Marketing
+- SMS
+- Small Business
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,7 +46,63 @@ maintainers:
 common:
 - type: Website
   url: https://plusthis.com/
+- type: Documentation
+  url: https://kb.plusthis.com/
+- type: HelpCenter
+  url: https://help.plusthis.com/en/
+- type: Support
+  url: https://help.plusthis.com/en/
+- type: Blog
+  url: https://blog.plusthis.com/
+- type: Pricing
+  url: https://www.plusthis.com/pricing
+- type: SignUp
+  url: https://www.plusthis.com/register
+- type: Login
+  url: https://www.plusthis.com/app-login
+- type: TermsOfService
+  url: https://www.plusthis.com/eula
+- type: PrivacyPolicy
+  url: https://www.plusthis.com/privacy
+- type: Plans
+  url: plans/plusthis-plans-pricing.yml
+- type: LLMsTxt
+  url: llms/plusthis-llms.txt
+- type: Lifecycle
+  url: lifecycle/plusthis-lifecycle.yml
+- type: Packages
+  url: packages/plusthis-packages.yml
+- type: DomainSecurity
+  url: security/plusthis-domain-security.yml
 x-vouched-by:
 - Drip
 - Ontraport
 x-vouch-count: 2
+x-enrichment:
+  date: '2026-08-12'
+  status: minimal
+  artifacts_added: 8
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    PlusThis is a no-code CRM add-on sold entirely through its own web app —
+    there is no developer portal, no API reference and no signup for API
+    credentials anywhere on plusthis.com, kb.plusthis.com or help.plusthis.com,
+    and the host named api.plusthis.com is the application login rather than an
+    API (it 404s every spec path and answers /v1 with a bare "OK").
+  evidence:
+  - url: https://api.plusthis.com/openapi.json
+    status: 404
+  - url: https://api.plusthis.com/v1
+    status: 200
+  - url: https://developer.plusthis.com/
+    status: 0
+  - url: https://docs.plusthis.com/
+    status: 0
+  - url: https://www.plusthis.com/.well-known/api-catalog
+    status: 404
+  - url: https://help.plusthis.com/llms.txt
+    status: 200
+  checked: '2026-08-12'

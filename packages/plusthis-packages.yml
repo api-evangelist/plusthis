@@ -1,0 +1,43 @@
+generated: '2026-08-12'
+method: searched
+source: public package registry + GitHub searches
+package_count: 0
+packages: []
+note: >
+  An honest zero. PlusThis ships no client libraries in any language, which
+  follows from it publishing no public API: the product is configured entirely
+  through its own web application and the CRM automations it plugs into, so
+  there is nothing for an SDK to wrap. No SDKs pointer is wired into apis.yml.
+registries_searched:
+- registry: npm
+  query: plusthis
+  endpoint: https://registry.npmjs.org/-/v1/search?text=plusthis
+  result: no first-party package
+- registry: pypi
+  package: plusthis
+  endpoint: https://pypi.org/pypi/plusthis/json
+  http_status: 404
+  result: absent
+- registry: rubygems
+  package: plusthis
+  endpoint: https://rubygems.org/api/v1/gems/plusthis.json
+  http_status: 404
+  result: absent
+- registry: github
+  query: plusthis
+  endpoint: https://api.github.com/search/repositories?q=plusthis
+  result: >
+    2 repositories, neither first-party — api-evangelist/plusthis (this profile)
+    and qa-bob/plusthis_QA_Agentic_Solution (unaffiliated third party). No
+    github.com/plusthis organisation is linked from any PlusThis page.
+- registry: maven-central
+  result: not searched — PlusThis publishes no JVM surface and no API for one to target
+- registry: nuget
+  result: not searched — PlusThis publishes no .NET surface and no API for one to target
+- registry: crates.io
+  result: not searched — PlusThis publishes no Rust surface and no API for one to target
+- registry: packagist
+  result: not searched — PlusThis publishes no PHP surface and no API for one to target
+- registry: pkg.go.dev
+  result: not searched — PlusThis publishes no Go surface and no API for one to target
+cdn_distributions: []

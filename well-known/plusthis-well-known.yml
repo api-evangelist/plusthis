@@ -1,0 +1,96 @@
+generated: '2026-08-12'
+method: probed
+source: live HTTPS probes of every PlusThis host found on the public surface
+note: >
+  Every /.well-known/ path was probed on all four PlusThis hosts. Only the
+  Intercom-hosted help centre (help.plusthis.com) answers anything, and the one
+  document it serves is Intercom's own vendor boilerplate — its Canonical field
+  names app.intercom.com, and its Contact/Policy point at Intercom's Bugcrowd
+  programme, not PlusThis. It is recorded here as observed evidence, but NO
+  WellKnown / SecurityTxt / Security pointer is emitted in apis.yml: crediting
+  PlusThis with a discovery or vulnerability-disclosure surface on the strength
+  of its help-desk vendor's file would be false credit. PlusThis itself serves
+  no /.well-known/ document from any host it controls.
+hosts:
+- host: https://api.plusthis.com
+  role: application host (serves the PlusThis web app login; not a documented API)
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://www.plusthis.com
+  role: marketing website
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://kb.plusthis.com
+  role: knowledge base
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://help.plusthis.com
+  role: Intercom-hosted help centre on a PlusThis subdomain
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: plusthis-help-intercom-security.txt
+    first_party: false
+    note: >
+      RFC 9116 file served by Intercom, not PlusThis. Canonical:
+      https://app.intercom.com/.well-known/security.txt; Contact:
+      https://bugcrowd.com/intercom and mailto:security@intercom.com;
+      Policy: Bugcrowd standard disclosure terms; Expires 2029-03-15.
+      Not evidence of a PlusThis vulnerability-disclosure programme.
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+summary:
+  hosts_probed: 4
+  paths_probed_per_host: 7
+  first_party_documents_found: 0
+  third_party_documents_found: 1
+  pointer_emitted: false

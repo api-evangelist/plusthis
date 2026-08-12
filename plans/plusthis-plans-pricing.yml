@@ -1,0 +1,124 @@
+generated: '2026-08-12'
+method: searched
+source: https://www.plusthis.com/pricing
+docs: https://www.plusthis.com/agency-pricing
+currency: USD
+plan_count: 7
+billing_periods:
+- monthly
+- annual
+trial:
+  available: true
+  length_days: 14
+  applies_to: all plans
+metering:
+  unit: Tool Run
+  note: >
+    PlusThis meters on "Tool Runs" — one execution of a configured tool — and on
+    the number of Active Tools a plan may have running at once. There is no
+    per-API-call pricing because PlusThis publishes no public API; the quota is
+    consumed by tools firing inside the connected CRM automation.
+plans:
+- name: Starter
+  segment: small-business
+  price_monthly: 39
+  price_annual_monthly_equivalent: 32.50
+  price_annual_total: 390
+  currency: USD
+  limits:
+    active_tools: 2
+    tool_runs_per_month: 750
+  features: []
+  overage: not published
+- name: Pro
+  segment: small-business
+  price_monthly: 69
+  price_annual_monthly_equivalent: 57.50
+  price_annual_total: 690
+  currency: USD
+  limits:
+    active_tools: 10
+    tool_runs_per_month: 5000
+  features:
+  - Scheduled tools
+  - Tool Chain (combine tools into a chain)
+  overage: not published
+- name: Max
+  segment: small-business
+  price_monthly: 99
+  price_annual_monthly_equivalent: 82.50
+  price_annual_total: 990
+  currency: USD
+  limits:
+    active_tools: unlimited
+    tool_runs_per_month: 50000
+  features:
+  - Scheduled tools
+  - Tool Chain (combine tools into a chain)
+  - Phone support
+  - Priority ticket handling
+  - Priority tool execution
+  overage: not published
+- name: GHL Agency 5K
+  segment: agency
+  price_monthly: 99
+  price_annual_monthly_equivalent: 82.50
+  currency: USD
+  limits:
+    tool_runs_per_month: 5000
+    sub_accounts: unlimited
+    active_tools: unlimited
+  features:
+  - Pro Features
+  - Priority Status
+- name: GHL Agency 10K
+  segment: agency
+  price_monthly: 149
+  price_annual_monthly_equivalent: 124.16
+  currency: USD
+  limits:
+    tool_runs_per_month: 10000
+    sub_accounts: unlimited
+    active_tools: unlimited
+  features:
+  - Pro Features
+  - Priority Status
+- name: GHL Agency 20K
+  segment: agency
+  price_monthly: 219
+  price_annual_monthly_equivalent: 182.50
+  currency: USD
+  limits:
+    tool_runs_per_month: 20000
+    sub_accounts: unlimited
+    active_tools: unlimited
+  features:
+  - Pro Features
+  - Priority Status
+- name: GHL Agency 2M
+  segment: agency
+  price_monthly: 2399
+  price_annual_monthly_equivalent: 1999.16
+  currency: USD
+  limits:
+    tool_runs_per_month: 2000000
+    sub_accounts: unlimited
+    active_tools: unlimited
+  features:
+  - Pro Features
+  - Priority Status
+  note: top of the published agency ladder
+notes:
+- >
+  The GHL (HighLevel) agency ladder is a continuous tiered scale from the 5K tier
+  through the 2M tier. Only the tiers whose prices were read verbatim from the
+  pricing page are enumerated above; intermediate rungs exist on the published
+  slider but their prices were not captured individually rather than guessed.
+- >
+  No free-forever tier and no enterprise "contact us" tier is published — every
+  tier carries a list price.
+- Overage behaviour past the monthly Tool Run quota is not published.
+x-evidence:
+  fetched: '2026-08-12'
+  url: https://www.plusthis.com/pricing
+  http_status: 200
