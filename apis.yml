@@ -15,6 +15,17 @@ description: >-
   calls, and it publishes no public developer API, no OpenAPI or other
   machine-readable contract, and no client SDKs — it is a consumer of other
   vendors' APIs rather than a producer of one.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://d60ayi9p2ljnr.cloudfront.net/cms/assets/plusthis-icon-lg.png
 url: https://raw.githubusercontent.com/api-evangelist/plusthis/refs/heads/main/apis.yml
 x-type: company
