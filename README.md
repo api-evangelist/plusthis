@@ -64,5 +64,104 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-PlusThis is a company surfaced via the API Evangelist harvest backlog (source: marketing-integration-graph) and added to the network as a stub for full-pipeline profiling.
-- https://plusthis.com/
+PlusThis is an Arizona-based marketing automation add-on company, founded in 2011, that sells a toolkit of roughly seventy no-code "tools" which bolt extra behaviour onto a CRM a business already runs — Keap (Infusionsoft), ActiveCampaign, Ontraport, HubSpot, Drip and HighLevel (GHL). The tools cover action links and smart links, countdown and evergreen-date scarcity, webinar and meeting connections (Zoom, GoToWebinar, WebinarJam, EverWebinar), scheduling connections (Calendly, Acuity), SMS sequences, field math and text formatting, contact validation and deduplication, Google Sheets and Drive export, Slack and DocuSign connections, and a Webhook Catcher that writes inbound third-party webhook payloads onto a CRM contact record. PlusThis is metered commercially on Active Tools and monthly Tool Runs rather than API calls, and it publishes no public developer API, no OpenAPI or other machine-readable contract, and no client SDKs — it is a consumer of other vendors' APIs rather than a producer of one.
+
+**Areas:** Company · Marketing Automation · Marketing · CRM · Sales · No-Code · Automation · Integration · Webhook · Email Marketing · SMS · Small Business
+
+## PlusThis on APIs.io
+
+Everything profiled for PlusThis is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/plusthis/](https://apis.io/providers/plusthis/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Plusthis Webhooks](https://apis.io/asyncapis/plusthis/plusthis-webhooks/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Plusthis Domain Security](https://apis.io/security/plusthis/plusthis-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Plusthis Plans Pricing](https://apis.io/plans/plusthis/plusthis-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Plusthis Rate Limits](https://apis.io/rate-limits/plusthis/plusthis-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://plusthis.com/)
+- [Documentation](https://kb.plusthis.com/)
+- [Pricing](https://www.plusthis.com/pricing)
+- [Sign up](https://www.plusthis.com/register)
+- [Support](https://help.plusthis.com/en/)
+- [Blog](https://blog.plusthis.com/)
+- [Terms of service](https://www.plusthis.com/eula)
+- [Privacy policy](https://www.plusthis.com/privacy)
+
+## API Evangelist rating
+
+**Kin Score 32.6** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 39.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 16.7 |
+| Access clarity | 76.3 |
+
+**Agent readiness 19.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | yes |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.7** — Telecommunications
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/plusthis/](https://apis.io/providers/plusthis/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for PlusThis: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/plusthis/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
